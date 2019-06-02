@@ -7,87 +7,93 @@
 </head>
 
 <body>
-
+    <script>
+        var ary1 = [2, 3, 6, 1, 31, 2, 43, 5, 122, 21, 55, 88];
+        console.log(insert(ary1));
+       ary1.splice(0, 0, 99);  //插入到当前项前面 splice(0, 0, 99)
+      // ary1.splice(1, 0, 88);
+     console.log(ary1);
+    </script>
 
 
     <div>
-<br>      这是我们的备注地方
-<br>
-<br>
-<br>      --------------------------------------------------
-<br>      初始化仓库
-<br>      命令1  git init
-<br>      --------------------------------------------------
-<br>      配置用户信息 常用命令如下：
-<br>      git config --global user.name “xxxx” 设置用户名
-<br>
-<br>      git config --global user.email “xxxx” 设置邮箱
-<br>
-<br>      git config user.name 查看用户名
-<br>
-<br>      git config user.email 查看邮箱
-<br>
-<br>      git config --global user.name “xxxx” 修改用户名
-<br>
-<br>      git config --global user.email "xxxx@xxx.com" 修改邮箱
-<br>
-<br>      --------------------------------------------------
-<br>      -把代码存储到git仓库中
-<br>      1 把代码放到仓库的门口
-<br>      git add ./文件
-<br>      git add ./        全部文件放入仓库门口
-<br>      2把仓储门口的代码放到里面的房间中去
-<br>      git commit -m "备注信息"    提交到仓库房间
-<br>      3 查看状态 可以查看当前代码是否放入仓库
-<br>      git status
-<br>
-<br>      4 一次性把代码放到仓库的房间里（版本库）
-<br>      git commit --all -m  "备注信息"   全部修改文件提交的仓库房间
-<br>
-<br>      5 git查看日志
-<br>      git log  --oneline
-<br>
-<br>      git中忽略文件
-<br>      gitignore 在这个文件夹中可以设置要被忽略的文件或者目录。
-<br>      被忽略的文件不会被提交到仓库里
-<br>      在.gitignore中可以书写要被忽略的文件的路径，以/开头，
-<br>      一行写一个路径。这些路径所对应的文件都会被忽略，
-<br>      不会被提交到仓库
-<br>      写法：
-<br>      * '/.idea' 会忽略.idea文件
-<br>      * '/js'  会忽略js目录里的所有文件
-<br>      * '/js/*.js'  会忽略js目录里的所有js文件
-<br>
-<br>      git reset --hard Head~0
-<br>      git reset --hard [版本号versionnum]
-<br>
-<br>      git reflog
-<br>
-<br>      -12流行框架-git创建分支，切换分支
-<br>      默认是有一个主分支master
-<br>      创建分支 git branch [分支名]
-<br>      查看分支 git branch
-<br>      切换分支 git checkout [分支名]
-<br>      在主分支中执行 合并分支 git merge [分支名]
-<br>
-<br>      在主分支中执行  git branch -d  [分支名] 删除指定分支
-<br>
-<br>      -----------------------------------------------
-<br>      14流行框架-git push命令，把本地把--重点-----R-----------
-<br>
-<br>      git  push  [https://github.com/weijie858/text.git] master
-<br>      会把当前分支的内容上传到远程的master分支
-<br>      --------------------------------------------------
-<br>      git pull  [https://github.com/weijie858/text.git] master
-<br>      会把远程分支的数据得到（注意本地需要初始化一个仓库）
-<br>
-<br>      git clone  [https://github.com/weijie858/text.git] master
-<br>
-<br>
-<br>      --------------------------------------------------
-<br>      19流行框架- push和pull时的简写方式c
-<br>      命令 git remote add  origin[变量名替换远程地址] 远程地址
-<br>      git push  origin[变量名替换远程地址] -u master
+        <br>      这是我们的备注地方
+        <br>
+        <br>
+        <br>      --------------------------------------------------
+        <br>      初始化仓库
+        <br>      命令1  git init
+        <br>      --------------------------------------------------
+        <br>      配置用户信息 常用命令如下：
+        <br>      git config --global user.name “xxxx” 设置用户名
+        <br>
+        <br>      git config --global user.email “xxxx” 设置邮箱
+        <br>
+        <br>      git config user.name 查看用户名
+        <br>
+        <br>      git config user.email 查看邮箱
+        <br>
+        <br>      git config --global user.name “xxxx” 修改用户名
+        <br>
+        <br>      git config --global user.email "xxxx@xxx.com" 修改邮箱
+        <br>
+        <br>      --------------------------------------------------
+        <br>      -把代码存储到git仓库中
+        <br>      1 把代码放到仓库的门口
+        <br>      git add ./文件
+        <br>      git add ./        全部文件放入仓库门口
+        <br>      2把仓储门口的代码放到里面的房间中去
+        <br>      git commit -m "备注信息"    提交到仓库房间
+        <br>      3 查看状态 可以查看当前代码是否放入仓库
+        <br>      git status
+        <br>
+        <br>      4 一次性把代码放到仓库的房间里（版本库）
+        <br>      git commit --all -m  "备注信息"   全部修改文件提交的仓库房间
+        <br>
+        <br>      5 git查看日志
+        <br>      git log  --oneline
+        <br>
+        <br>      git中忽略文件
+        <br>      gitignore 在这个文件夹中可以设置要被忽略的文件或者目录。
+        <br>      被忽略的文件不会被提交到仓库里
+        <br>      在.gitignore中可以书写要被忽略的文件的路径，以/开头，
+        <br>      一行写一个路径。这些路径所对应的文件都会被忽略，
+        <br>      不会被提交到仓库
+        <br>      写法：
+        <br>      * '/.idea' 会忽略.idea文件
+        <br>      * '/js'  会忽略js目录里的所有文件
+        <br>      * '/js/*.js'  会忽略js目录里的所有js文件
+        <br>
+        <br>      git reset --hard Head~0
+        <br>      git reset --hard [版本号versionnum]
+        <br>
+        <br>      git reflog
+        <br>
+        <br>      -12流行框架-git创建分支，切换分支
+        <br>      默认是有一个主分支master
+        <br>      创建分支 git branch [分支名]
+        <br>      查看分支 git branch
+        <br>      切换分支 git checkout [分支名]
+        <br>      在主分支中执行 合并分支 git merge [分支名]
+        <br>
+        <br>      在主分支中执行  git branch -d  [分支名] 删除指定分支
+        <br>
+        <br>      -----------------------------------------------
+        <br>      14流行框架-git push命令，把本地把--重点-----R-----------
+        <br>
+        <br>      git  push  [https://github.com/weijie858/text.git] master
+        <br>      会把当前分支的内容上传到远程的master分支
+        <br>      --------------------------------------------------
+        <br>      git pull  [https://github.com/weijie858/text.git] master
+        <br>      会把远程分支的数据得到（注意本地需要初始化一个仓库）
+        <br>
+        <br>      git clone  [https://github.com/weijie858/text.git] master
+        <br>
+        <br>
+        <br>      --------------------------------------------------
+        <br>      19流行框架- push和pull时的简写方式c
+        <br>      命令 git remote add  origin[变量名替换远程地址] 远程地址
+        <br>      git push  origin[变量名替换远程地址] -u master
     </div>
 
 </body>
