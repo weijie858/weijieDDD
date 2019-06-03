@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<div onclick="alert('ddd')">ddddd</div>
+</body>
+
+<script>
+    var array=[1,2,2,4,5,7,8,9];
+    console.log((array));
+
+    function fn() {
+        console.log(arguments);
+    }
+    for(        var i=0;i<array.length;i++){
+        console.log((i));
+    }
+    for (const arrayKey in array) {
+        console.log((array[arrayKey]));
+    }
+
+    //-------02-数组方法-增加和删除以及修改-------R
+    //数组常用方法 控制台查看  console.dir(Array.prototype)
+    console.dir(Array.prototype);
+    //1方法作用和意义 2 方法的形参 3是否有返回值 4通过此方法操作，原数组是否发生改变
+    //增加 push unshift ary[ary.length]
+    array.push(100);
+    array.unshift(20); //向数组开头追加新内容
+    array[array.length] //把数组当做一个普通的对象，使用对象键值对的操作给其设置新的属性(索引)
+    //参数 需要追加的内容
+    array.push(99,"字符串",{"name":"ceshi","age":18},function fn() {
+       console .log(1);
+    },9);
+    console.log(array);
+    //-删除-----------------
+    //pop 删除数组最后一项 参数无 返回值 被删除的最后一项的值 原有数组改变了
+    //shift 删除数组的第一项  参数无 返回值 被删除的首项的值 原有数组改变了
+    //delete  delete arrat[i]   当前索引被删除，原有数组其他项的索引不会改变
+    //array.length--
+    //splice 数组中内置的方法 可以实现数组的增加修改删除
+  //  splice(n,m)  从索引n开始删除m个 （m不写删除到数组末尾，n也不写 一项也不删除） 返回值：被删除的内容 原数组改变
+    //splice 实现修改 splice（n，m，x） 在原有的删除基础上，用x代替删除的内容 array.splice(1,1,100)
+    //splice 实现增加 splice（n,0,x) 在修改的基础上，我们一项也不删除，把x插入到索引n的前面
+
+
+
+    //03-数组方法-数组的查询和拼接---------------------------------------
+    /*slice:数组的查询
+    参数 slice（n,m) 从索引n开始找到索引为m，不包含索引m项
+    返回值：把找到的部分以一个新数组返回
+    原来的数组不变
+    slice(n) 从索引n开始找到末尾
+    slice(0)  /slice () 数组克隆，克隆一份和原来数组一模一样的新数组
+    slice支持负数索引，如果传递的索引为负数，浏览器解析的时候是按照 总长度+负数索引 来处理的
+    讲两个数组进行拼接
+    concat
+    参数 要拼接的内容（把内容放在原数组的后面)，可以是一个数组或数据值
+    返回 拼接后的新数组
+    原有数组不变
+    concat（）  克隆一份和原来数组一模一样的新数组
+    ary.concat([2,3],[33,6],12,'zhufeng')  */
+
+
+
+       //04-数组方法-数组转换为字符串
+/*
+* 1 toString 实现吧数组转换为字符串，转换后的字符串以逗号隔开
+参数 无 返回值 转换后的字符串 原有数组不变
+*2 join 把数组按照指定的分隔符转为字符串，和字符串中的split相对应
+* 参数 指定的链接符 返回值 转换后的字符串  原有数组不变
+* 已知数组中的每一项都是数字，向实现数组求和 实现方式
+*1循环实现  var total=null；
+*       for（var i=0 ；i<ary.length;i++){
+*          total+=ary[i];
+*       }
+* 2利用join eval()
+*  eval（ary.join('+'））； //eval 把字符串变为js表达式执行
+* */
+
+
+
+
+  //  05-数组方法-数组中的排列和排序  /**/
+/*
+* 1 reverse 参数 无 返回值 排序后的数组 原有数组改变
+* 2 sort 参数 无或者回调函数 返回值 排序后的数组 原有数组改变
+*           array.sort(function (a,b) {
+              return a-b ;//升序
+              return b-a ;//降序
+                })
+* */
+
+ //   06-数组方法-验证数组中是否包含某一项
+    /*
+    * indexof  lastIndexof 获取当前项在数组中第一次或最后一次出现的索引位置
+    * 数组 中的这两个方法在 ie6-8不兼容
+    *   Array.prototype.myIndexof=function myIndexof(value) {
+                                      var result=-1;
+                                  for (var i = 0; i < this.length;i++){
+                                      if(value===this [i]){
+                                          result=i;
+                                          break;
+                                      }
+                                  }
+                                  return result;
+                         }
+    * 字符串中的这两个方法兼容所有的浏览器
+    *
+    * 如果当前数组中没有这一项，返回索引-1 我们根据这一点验证数组中是否包含这一项
+    *         if(array.indexOf((12)>-1)){
+             // 数组中包含12执行
+         }
+    * */
+    Array.prototype.myIndexof=function myIndexof(value) {
+        var result=-1;
+        for (var i = 0; i < this.length;i++){
+            if(value===this [i]){
+                result=i;
+                break;
+            }
+        }
+        return result;
+    }
+    //07-数组方法-遍历数组的一些方法
+    /*
+    * 以下方法在ie6-8都不兼容
+    *    array.forEach(function (value, index, array) {
+     //数组中有多少项，当前回调函数就执行多少次， 每一次传递进来的value 就是当前遍历数组这一项的值，index就是遍历这一项的索引
+    });
+    array.map(function () {
+//遍历数组中的每一项 在foreach的基础上，可以修改每一项的值
+ //数组中有多少项，当前回调函数就执行多少次， 每一次传递进来的value 就是当前遍历数组这一项的值，index就是遍历这一项的索引
+//   return XXX    retrun 返回当前项的值
+    })
+    filter
+    find
+    reduce
+    erery
+    *
+    * */
+
+
+
+ //   08-数组去重-双循环遍历法-------R重点
+    /*
+    * 方案一
+    * 遍历数组中每一项，拿每一项和后面的依次比较，如果相同了，则把相同的这一项在原数组中删除
+    * */
+    for (var i = 0; i < ary.length-1; i++) {
+      var cur=ary[i];//当前遍历的这一项
+        for (var j = i+1; j < ary.length; i++) {
+           // ary[j]  //作比较的项
+                if(cur===ary[j]){
+                    ary.splice(j,1);
+                }
+        }
+        
+    }
+
+</script>
+</html>

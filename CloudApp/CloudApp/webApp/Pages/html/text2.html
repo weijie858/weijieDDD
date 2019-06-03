@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //数组去重
+       let ary=[12,1,2,1,2,1,2,3,1,3,2,1,3,1,2,3,2,3,1,23,4,1,3,21,23,4];
+        for (let i = 0; i < ary.length-1; i++) {
+            let cur=ary[i];//当前遍历的这一项
+            for (let j = i+1; j < ary.length; i++) {
+                // ary[j]  //作比较的项
+                if(cur===ary[j]){
+                    ary.splice(j,1);
+                    j--;
+                    //数组塌陷问题 我们使用splice 删除数组中的某一项后 ，删除这一项后面的每一项索引都要向前进一位，（在原有索引上减一），此时如果我们j++，循环操作的值累加了，我们通过最新j获取的元素不是紧挨删除这一项的元素，而是跳过一项获取的元素
+                    //解决方法：j-- 先j-- 然后在j++ 相当于没加没减。此时j还是原有索引。在获取的时候就是删除这一项后面紧挨着的这一项
+                }
+            }
+            for (let j = i+1; j < ary.length;) {
+                // ary[j]  //作比较的项
+            cur===ary[j]?ary.splice((j,1)):j++;
+            }
+
+        }
+        console .log(ary);
+    </script>
+</head>
+<body>
+sss
+</body>
+</html>
