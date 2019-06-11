@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD", "DDD\DDD.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{952C8E01-4F6F-4EA0-AF1C-0579E30205EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "实例", "实例", "{CBC78EA0-CB6E-4B4F-87B0-F7B82BA7E361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{8063061A-BF12-413B-9711-5263DF72126F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{952C8E01-4F6F-4EA0-AF1C-0579E30205EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{952C8E01-4F6F-4EA0-AF1C-0579E30205EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{952C8E01-4F6F-4EA0-AF1C-0579E30205EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8063061A-BF12-413B-9711-5263DF72126F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8063061A-BF12-413B-9711-5263DF72126F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8063061A-BF12-413B-9711-5263DF72126F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8063061A-BF12-413B-9711-5263DF72126F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{77868AA7-3A5B-4729-96AC-1ABB10DF43E0} = {A4A17CB5-57A7-472D-A460-19A34052DB42}
 		{FD07BE8C-35BA-40FD-AA38-962B155A544F} = {A4A17CB5-57A7-472D-A460-19A34052DB42}
+		{8063061A-BF12-413B-9711-5263DF72126F} = {CBC78EA0-CB6E-4B4F-87B0-F7B82BA7E361}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32395EC0-9979-43B8-9A41-FF3159ED302F}
