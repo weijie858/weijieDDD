@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApp", "webApp\webApp.csproj", "{0538660E-48E3-40E1-982D-05F215AFB073}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webApp", "webApp\webApp.csproj", "{0538660E-48E3-40E1-982D-05F215AFB073}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-核心框架", "0-核心框架", "{A4A17CB5-57A7-472D-A460-19A34052DB42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{77868AA7-3A5B-4729-96AC-1ABB10DF43E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD", "DDD\DDD.csproj", "{FD07BE8C-35BA-40FD-AA38-962B155A544F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{0538660E-48E3-40E1-982D-05F215AFB073}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0538660E-48E3-40E1-982D-05F215AFB073}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0538660E-48E3-40E1-982D-05F215AFB073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD07BE8C-35BA-40FD-AA38-962B155A544F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD07BE8C-35BA-40FD-AA38-962B155A544F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD07BE8C-35BA-40FD-AA38-962B155A544F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD07BE8C-35BA-40FD-AA38-962B155A544F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{77868AA7-3A5B-4729-96AC-1ABB10DF43E0} = {A4A17CB5-57A7-472D-A460-19A34052DB42}
+		{FD07BE8C-35BA-40FD-AA38-962B155A544F} = {A4A17CB5-57A7-472D-A460-19A34052DB42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32395EC0-9979-43B8-9A41-FF3159ED302F}
