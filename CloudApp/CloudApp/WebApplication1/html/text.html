@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+
+<body>
+    <script>
+
+        var ary1 = [2, 3, 6, 1, 31, 2, 43, 5, 122, 21, 55, 88];
+        console.log(insert(ary1));
+        ary1.splice(0, 0, 99);  //插入到当前项前面 splice(0, 0, 99)  在索引n处，删除m个值，插入k   splice(n,m,k)
+        // ary1.splice(1, 0, 88);
+        console.log(ary1);
+    </script>
+
+
+    <div id="container">
+        <ul>
+            <li>      这是我们的备注地方                                                                </li>
+            <li>                                                                                        </li>
+            <li>                                                                                        </li>
+            <li>      --------------------------------------------------                                </li>
+            <li>      初始化仓库                                                                        </li>
+            <li>      命令1  git init                                                                   </li>
+            <li>      --------------------------------------------------                                </li>
+            <li>      配置用户信息 常用命令如下：                                                       </li>
+            <li>      git config --global user.name “xxxx” 设置用户名                                 </li>
+            <li>                                                                                        </li>
+            <li>      git config --global user.email “xxxx” 设置邮箱                                  </li>
+            <li>                                                                                        </li>
+            <li>      git config user.name 查看用户名                                                   </li>
+            <li>                                                                                        </li>
+            <li>      git config user.email 查看邮箱                                                    </li>
+            <li>                                                                                        </li>
+            <li>      git config --global user.name “xxxx” 修改用户名                                 </li>
+            <li>                                                                                        </li>
+            <li>      git config --global user.email "xxxx@xxx.com" 修改邮箱                            </li>
+            <li>                                                                                        </li>
+            <li>      --------------------------------------------------                                </li>
+            <li>      -把代码存储到git仓库中                                                            </li>
+            <li>      1 把代码放到仓库的门口                                                            </li>
+            <li>      git add ./文件                                                                    </li>
+            <li>      git add ./        全部文件放入仓库门口                                            </li>
+            <li>      2把仓储门口的代码放到里面的房间中去                                               </li>
+            <li>      git commit -m "备注信息"    提交到仓库房间                                        </li>
+            <li>      3 查看状态 可以查看当前代码是否放入仓库                                           </li>
+            <li>      git status                                                                        </li>
+            <li>                                                                                        </li>
+            <li>      4 一次性把代码放到仓库的房间里（版本库）                                          </li>
+            <li>      git commit --all -m  "备注信息"   全部修改文件提交的仓库房间                      </li>
+            <li>                                                                                        </li>
+            <li>      5 git查看日志                                                                     </li>
+            <li>      git log  --oneline                                                                </li>
+            <li>                                                                                        </li>
+            <li>      git中忽略文件                                                                     </li>
+            <li>      gitignore 在这个文件夹中可以设置要被忽略的文件或者目录。                          </li>
+            <li>      被忽略的文件不会被提交到仓库里                                                    </li>
+            <li>      在.gitignore中可以书写要被忽略的文件的路径，以/开头，                             </li>
+            <li>      一行写一个路径。这些路径所对应的文件都会被忽略，                                  </li>
+            <li>      不会被提交到仓库                                                                  </li>
+            <li>      写法：                                                                            </li>
+            <li>      * '/.idea' 会忽略.idea文件                                                        </li>
+            <li>      * '/js'  会忽略js目录里的所有文件                                                 </li>
+            <li>      * '/js/*.js'  会忽略js目录里的所有js文件                                          </li>
+            <li>                                                                                        </li>
+            <li>      git reset --hard Head~0                                                           </li>
+            <li>      git reset --hard [版本号versionnum]                                               </li>
+            <li>                                                                                        </li>
+            <li>      git reflog                                                                        </li>
+            <li>                                                                                        </li>
+            <li>      -12流行框架-git创建分支，切换分支                                                 </li>
+            <li>      默认是有一个主分支master                                                          </li>
+            <li>      创建分支 git branch [分支名]                                                      </li>
+            <li>      查看分支 git branch                                                               </li>
+            <li>      切换分支 git checkout [分支名]                                                    </li>
+            <li>      在主分支中执行 合并分支 git merge [分支名]                                        </li>
+            <li>                                                                                        </li>
+            <li>      在主分支中执行  git branch -d  [分支名] 删除指定分支                              </li>
+            <li>                                                                                        </li>
+            <li>      -----------------------------------------------                                   </li>
+            <li>      14流行框架-git push命令，把本地把--重点-----R-----------                          </li>
+            <li>                                                                                        </li>
+            <li>      git  push  [https://github.com/weijie858/text.git] master                         </li>
+            <li>      会把当前分支的内容上传到远程的master分支                                          </li>
+            <li>      --------------------------------------------------                                </li>
+            <li>      git pull  [https://github.com/weijie858/text.git] master                          </li>
+            <li>      会把远程分支的数据得到（注意本地需要初始化一个仓库）                              </li>
+            <li>                                                                                        </li>
+            <li>      git clone  [https://github.com/weijie858/text.git] master                         </li>
+            <li>                                                                                        </li>
+            <li>                                                                                        </li>
+            <li>      --------------------------------------------------                                </li>
+            <li>      19流行框架- push和pull时的简写方式c                                               </li>
+            <li>      命令 git remote add  origin[变量名替换远程地址] 远程地址                          </li>
+            <li>      git push  origin[变量名替换远程地址] -u master                                    </li>
+        </ul>
+    </div>
+    <script>
+        var dom = document.getElementById("container");
+        var brstr = dom.getElementsByTagName("li");
+        for (var i = 0; i < brstr.length; i++) {
+            i % 2 === 0 ? brstr[i].style.backgroundColor = "#EEE" : null;
+            switch (i % 2) {
+                case 1:
+                    brstr[i].style.backgroundColor = 'red';
+                    break;
+            }
+
+        }
+        console.log(brstr);  //HTMLCollection 类数组
+    </script>
+
+    <script>
+        var num = 10;
+        switch (num % 2) {
+            case 0:
+                console.log(num);
+                break;  
+            case 1:
+                console.log("要执行的语句");
+                break;
+            default:
+                console.log("要执行的语句");
+                break;
+        }
+    </script>
+</body>
+</html>
