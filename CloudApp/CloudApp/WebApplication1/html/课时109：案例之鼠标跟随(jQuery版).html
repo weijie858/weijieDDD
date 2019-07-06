@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        body,div,img{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width:440px;
+            margin:20px auto;
+        }
+        .box img{
+            width:100px;
+            height:75px;
+            float:left;
+            border:1px solid #4cff00;
+            margin-left:10px;
+        }
+        #mark {
+               display:none;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:11;
+            width:400px;
+            height:300px;
+             border:1px solid #4cff00;
+        }
+        #mark img {
+            
+            float:inherit;
+            border:none;
+            margin-left:0;
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/1.jpg"  bigImg=""/>
+        <img src="img/2.jpg" bigImg="" />
+        <img src="img/3.jpg" bigImg="" />
+        <img src="img/4.jpg" bigImg="" />
+       <div id="mark">
+           <img src="img/4.jpg" bigImg="" />
+       </div>
+    </div>
+</body>
+</html>
