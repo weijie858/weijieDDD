@@ -83,7 +83,7 @@ var utils = (function () {
     }
 }());
 
-Array.prototype.myForEach = function myForEach(callBack,context) {
+Array.prototype.myForEach = function myForEach(callBack, context) {
     context = context || window;
     if ('forEach' in Array.prototype) {
         this.forEach(callBack, context);
@@ -91,6 +91,50 @@ Array.prototype.myForEach = function myForEach(callBack,context) {
     }
     //ie6-8下自己编写回调执行的逻辑
     for (var i = 0; i < this.length; i++) {
-        callBack && callBack.call(context,this[i],i,this);
+        callBack && callBack.call(context, this[i], i, this);
+    }
+}
+
+
+Array.prototype.myMap = function myForEach(callBack, context) {
+    context = context || window;
+    if ('map' in Array.prototype) {
+        return this.map(callBack, context);
+    }
+    //ie6-8下自己编写回调执行的逻辑
+    var newAry = [];
+    for (var i = 0; i < this.length; i++) {
+        if (typeof callBack === 'function') {
+            var val = callBack.call(context, this[i], i, this);
+            newAry[newAry.length] = val;
+        }
+    }
+    return newAry;
+}
+
+
+// 柯理化函数思想：一个js预先处理的思想
+
+function bind(callBack,context) {
+    context = context || window;
+    var outerAry = Array.prototype.slice.call(arguments, 2); //arguments.splice(2);
+    return function () {
+        var innerAry = Array.prototype.slice.call(arguments, 0);
+        callBack.apply(context, outerAry.concat(innerAry));
+    }
+}
+
+Function.prototype.myBind = function myBind(context) {
+    var _this = this;
+    var outerArg = Array.prototype.slice.call(arguments, 1);
+    if ('bind' in Function.prototype) {
+        return this.bind.apply(this, [context].concat(outerArg));
+    }
+   
+    return function () {
+        var innerArg = Array.prototype.slice.call(arguments, 0);
+        innerArg.length === 0?innerArg[innerArg.length]=window.event:null;
+        var arg = outerArg.concat(innerArg);
+        _this.apply(context, arg);
     }
 }
