@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        /*a{
+            display:block;
+            text-decoration-line:none
+        }*/
+        ul ,li{
+            list-style:none;
+            margin:0px;
+
+        }
+        html,body{
+            width:100%;height:100%;
+            border-top:1px solid transparent;
+        }
+        .box{
+            width:500px;
+            position:absolute;
+            top:20px;
+            left:50%;
+            margin-left:-250px;
+        }
+        .box input{
+            padding:0 10px;
+            width:300px;
+            height:35px;
+                  border:1px solid #008000;
+        }
+        .box ul{
+            position:relative;
+            top:-1px;
+            border:1px solid #008000;
+            padding:0px
+        }
+        .box ul li, .box ul li a{
+       width:100%;
+          height:35px;
+          line-height:35px;
+        }
+        .box ul li a{
+          padding:0 10px;
+        }
+          .box ul li a:hover{
+        background:#ccc
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <input type="text" id="searchInp" />
+    <ul id="searchList">
+        <li><a>111111111</a></li>
+        <li><a>2222222222222</a></li>
+        <li><a>3333333333</a></li>
+        <li><a>4444444444</a></li>
+        <li><a>5555555555</a></li>
+        <li><a>66666666666</a></li>
+        <li><a>77777777777</a></li>
+    </ul>  
+</div>
+  <script>
+      //显示
+      //文本框获取焦点，并且文本框中有内容的时候
+      //隐藏
+      var serinp = document.getElementById("searchInp"),
+          searchList = document.getElementById("searchList");
+
+      serinp.onfocus = function () {
+          var val = this.value.replace(/(^ +| +$)/g, "");//去首位空格
+          
+          searchList.style.display = val.length>0?"block":"none";
+
+      }
+      serinp.onkeyup = function () {
+          var val = this.value.replace(/(^ +| +$)/g, "");//去首位空格
+
+          searchList.style.display = val.length > 0 ? "block" : "none";
+      }
+      //事件委托
+      document.body.onclick = function (e) {
+          e = e || window.event;
+          e.target = e.target || e.srcElement;
+          if (e.target.tagName.toLowerCase() === 'a' && e.target.parentNode.parentNode.id === "searchList") {
+              searchList.style.display = 'none';
+              searchInp.value = e.target.innerHTML;
+              return;
+          }
+          if (e.target.id === "searchInp") {
+              return;
+          }
+          searchList.style.display = 'none';
+      }
+      searchInp.onclick = function (e) { //阻止该按钮事件委托
+          e = e || window.event;
+          e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+      }
+  </script>
+</body>
+</html>

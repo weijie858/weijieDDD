@@ -95,15 +95,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="html\06-验证码-基本功能实现.html" />
+    <Content Include="html\课时114：案例之百度搜索框.html" />
+    <Content Include="html\js\event.js" />
     <Content Include="html\js\utils.js" />
     <Content Include="html\js\珠峰JavaScript免费课视频\第一周\13-number数据类型的详细解读.js" />
     <Content Include="html\js\珠峰JavaScript免费课视频\第二周\06-验证码-基本功能实现.js" />
     <Content Include="html\js\第 5 章 ： 第五周DOM零级二级事件基础和实战以及兼容处理\课时050：盒子模型常用的属性%28前八个%29.js" />
     <Content Include="html\js\第 5 章 ： 第五周DOM零级二级事件基础和实战以及兼容处理\课时107：事件对象及兼容处理.js" />
+    <Content Include="html\js\第 5 章 ： 第五周DOM零级二级事件基础和实战以及兼容处理\课时117：拖拽DEMO%28实现基本的效果%29.js" />
     <Content Include="html\课时050：盒子模型常用的属性%28前八个%29.html" />
     <Content Include="html\课时107：事件对象及兼容处理.html" />
     <Content Include="html\课时109：案例之鼠标跟随%28jQuery版%29.html" />
     <Content Include="html\课时110：案例之鼠标跟随%28JS版%29.html" />
+    <Content Include="html\课时117：拖拽DEMO%28实现基本的效果%29.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

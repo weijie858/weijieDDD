@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.Utilities", "DotNet.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{2EEB5E3F-F35A-4848-8F53-78A574C5327D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{31D3CD64-3736-4BB4-9A52-792714033A81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{2EEB5E3F-F35A-4848-8F53-78A574C5327D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EEB5E3F-F35A-4848-8F53-78A574C5327D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EEB5E3F-F35A-4848-8F53-78A574C5327D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D3CD64-3736-4BB4-9A52-792714033A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D3CD64-3736-4BB4-9A52-792714033A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D3CD64-3736-4BB4-9A52-792714033A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D3CD64-3736-4BB4-9A52-792714033A81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
