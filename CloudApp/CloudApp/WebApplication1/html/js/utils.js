@@ -23,8 +23,19 @@
     },
 
 }
+function sort() {
+    var ary = utils.listToArray(oRows);
+    ary.sort(function (a, b) {
+        return parseFloat(a.cells[1].innerHtml) - parseFloat(a.cells[1].innerHtml);
+    });
+    var frg = document.createDocumentFragment();
+    for (var i = 0; i < ary.length; i++) {
+        frg.appendChild(ary[i]);
+    }
+    tbody.appendChild(frg);
+    frg = null;
+}
 
-var frg = document.createDocumentFragment();
 
 var utils = (function () {
     var flag = 'getComputedStyle' in window
