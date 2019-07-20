@@ -10,7 +10,7 @@
             }
         }
         return ary;
-    },
+    },   //var arr = $.makeArray( obj );  jquery 方法
     jsonParse: function (str) {
         //ie 6-7 没有JSON对象
         //  var val = null;
