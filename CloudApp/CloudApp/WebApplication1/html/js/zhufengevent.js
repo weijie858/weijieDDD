@@ -79,7 +79,8 @@
         var ary = curele['myEvent' + evenType];
         for (var i = 0; i < ary.length; i++) {
             if (ary[i] === evenFn) {
-                ary.splice(i, 1);
+                //  ary.splice(i, 1);  为了防止塌陷问题，我们在移除的时候
+                ary[i] = null;
                 break;
             }
 
@@ -105,7 +106,13 @@
         var ary = this['myEvent' + e.type];   //   var ary = curele['myEvent' + evenType];
         for (var i = 0; i < ary.length; i++) {
             var tempFn = ary[i];
-            tempFn.call(this,e);//因为内置的事件池中绑定的方法执行的时候，this都是当前要操作的元素，并且浏览器还会给其传递一个事件对象，而我们自己创建的容器中存储的所有方法其实都相当于是要给当前元素绑定的事件，为了和内置的统一，我们也让执行的时候this变为当前的元素，并且也给它传递一个事件对象
+            if (typeof tempFn === "function") {
+                tempFn.call(this, e);//因为内置的事件池中绑定的方法执行的时候，this都是当前要操作的元素，并且浏览器还会给其传递一个事件对象，而我们自己创建的容器中存储的所有方法其实都相当于是要给当前元素绑定的事件，为了和内置的统一，我们也让执行的时候this变为当前的元素，并且也给它传递一个事件对象
+            } else {
+                ary.splice(i, 1);
+                i--;
+            }
+           
         }
     }
 

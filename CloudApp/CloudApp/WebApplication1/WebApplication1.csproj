@@ -99,6 +99,7 @@
     <Content Include="html\js\第 5 章 ： 第五周DOM零级二级事件基础和实战以及兼容处理\课时123-课时124：复习专用-DOM2兼容处理%28THIS和重复问题%29.js" />
     <Content Include="html\js\第 5 章 ： 第五周DOM零级二级事件基础和实战以及兼容处理\课时125：复习专用-使用自己的事件库重写拖拽.js" />
     <Content Include="html\js\第 5 章 ： 第五周DOM零级二级事件基础和实战以及兼容处理\课时126：弹性势能动画%28抛物线运动%29.js" />
+    <Content Include="html\webuplodaer.html" />
     <Content Include="html\课时114：案例之百度搜索框.html" />
     <Content Include="html\js\event.js" />
     <Content Include="html\js\utils.js" />
@@ -118,8 +119,26 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\uploader\Uploader.swf" />
+    <Content Include="scripts\uploader\webuploader.css" />
+    <Content Include="scripts\uploader\webuploader.custom.js" />
+    <Content Include="scripts\uploader\webuploader.custom.min.js" />
+    <Content Include="scripts\uploader\webuploader.fis.js" />
+    <Content Include="scripts\uploader\webuploader.flashonly.js" />
+    <Content Include="scripts\uploader\webuploader.flashonly.min.js" />
+    <Content Include="scripts\uploader\webuploader.html5only.js" />
+    <Content Include="scripts\uploader\webuploader.html5only.min.js" />
+    <Content Include="scripts\uploader\webuploader.js" />
+    <Content Include="scripts\uploader\webuploader.min.js" />
+    <Content Include="scripts\uploader\webuploader.noimage.js" />
+    <Content Include="scripts\uploader\webuploader.noimage.min.js" />
+    <Content Include="scripts\uploader\webuploader.nolog.js" />
+    <Content Include="scripts\uploader\webuploader.nolog.min.js" />
+    <Content Include="scripts\uploader\webuploader.withoutimage.js" />
+    <Content Include="scripts\uploader\webuploader.withoutimage.min.js" />
     <Content Include="记录每天\1.txt" />
     <Content Include="html\课时123-124：复习专用-DOM2兼容处理%28顺序和数组塌陷问题.html" />
+    <Content Include="scripts\uploader\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
