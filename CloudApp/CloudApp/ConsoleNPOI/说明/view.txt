@@ -1,0 +1,8 @@
+﻿1.6 NPOI 1.2 中各 Assembly 的作用
+ NPOI 目前有好几个 assembly，每个的作用各有不同， 开发人员可以按需加载相应的 ass embly。在这里大概罗列一下：
+  NPOI.Util 基础辅助库 
+  NPOI.POIFS OLE2 格式读写库 
+  NPOI.DDF Microsoft Drawing 格式读写库 
+  NPOI.SS Excel 公式计算库 
+  NPOI.HPSF OLE2 的 Summary Information 和 Document Summary Informati on 属性读写库 
+  NPOI.HSSF Excel BIFF 格式读写库
