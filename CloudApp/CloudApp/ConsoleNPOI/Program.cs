@@ -136,7 +136,7 @@ namespace ConsoleNPOI
             var cell = sheet1.GetRow(0).GetCell(0);
             cell.CellStyle = style;
 
-            getCellStyle();
+         //  getCellStyle();
            // cellTitle.CellStyle = style;
              WriteToFile();
         }
